@@ -257,7 +257,82 @@ to_entries
 {"id":"About"}
 ```
 
+arrayに戻す
+
+```json
+❯ cat menu.json | jq -c '.menu.items[] | {id}' | jq -s
+[
+  {
+    "id": "Open"
+  },
+  {
+    "id": "OpenNew"
+  },
+  {
+    "id": null
+  },
+  {
+    "id": "ZoomIn"
+  },
+  {
+    "id": "ZoomOut"
+  },
+  {
+    "id": "OriginalView"
+  },
+  {
+    "id": null
+  },
+  {
+    "id": "Quality"
+  },
+  {
+    "id": "Pause"
+  },
+  {
+    "id": "Mute"
+  },
+  {
+    "id": null
+  },
+  {
+    "id": "Find"
+  },
+  {
+    "id": "FindAgain"
+  },
+  {
+    "id": "Copy"
+  },
+  {
+    "id": "CopyAgain"
+  },
+  {
+    "id": "CopySVG"
+  },
+  {
+    "id": "ViewSVG"
+  },
+  {
+    "id": "ViewSource"
+  },
+  {
+    "id": "SaveAs"
+  },
+  {
+    "id": null
+  },
+  {
+    "id": "Help"
+  },
+  {
+    "id": "About"
+  }
+]
+```
+
 
 ## References
 - [シェル芸で使いたい jqイディオム \- Qiita](https://qiita.com/nmrmsys/items/5b4a4bd2e3909db161b1)
 - [JSON Example](https://json.org/example.html)
+- [jqで連続するオブジェクトを配列にする \- Qiita](https://qiita.com/eielh/items/aff045e1689be8e89972)
