@@ -229,6 +229,34 @@ to_entries
 `from_entries`で上記の戻しができる。
 
 
+結果をコンパクトに表示。
+
+```json
+❯ cat menu.json | jq -c '.menu.items[] | {id}'
+{"id":"Open"}
+{"id":"OpenNew"}
+{"id":null}
+{"id":"ZoomIn"}
+{"id":"ZoomOut"}
+{"id":"OriginalView"}
+{"id":null}
+{"id":"Quality"}
+{"id":"Pause"}
+{"id":"Mute"}
+{"id":null}
+{"id":"Find"}
+{"id":"FindAgain"}
+{"id":"Copy"}
+{"id":"CopyAgain"}
+{"id":"CopySVG"}
+{"id":"ViewSVG"}
+{"id":"ViewSource"}
+{"id":"SaveAs"}
+{"id":null}
+{"id":"Help"}
+{"id":"About"}
+```
+
 
 ## References
 - [シェル芸で使いたい jqイディオム \- Qiita](https://qiita.com/nmrmsys/items/5b4a4bd2e3909db161b1)
