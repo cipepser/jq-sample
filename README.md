@@ -189,6 +189,45 @@ map_values。
 }
 ```
 
+to_entries
+
+```json
+❯ echo '{"a":1, "b":2, "c":3, "d":4, "e":5}' | jq
+{
+  "a": 1,
+  "b": 2,
+  "c": 3,
+  "d": 4,
+  "e": 5
+}
+
+❯ echo '{"a":1, "b":2, "c":3, "d":4, "e":5}' | jq 'to_entries'
+[
+  {
+    "key": "a",
+    "value": 1
+  },
+  {
+    "key": "b",
+    "value": 2
+  },
+  {
+    "key": "c",
+    "value": 3
+  },
+  {
+    "key": "d",
+    "value": 4
+  },
+  {
+    "key": "e",
+    "value": 5
+  }
+]
+```
+
+`from_entries`で上記の戻しができる。
+
 
 
 ## References
