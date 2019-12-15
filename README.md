@@ -163,6 +163,33 @@ valueの置換。便利そうだけど具体的にいつ使うんだろう。
 }
 ```
 
+簡単なmap。`.`で指定したことなかったけど、便利そう。
+
+```json
+❯ echo '[1,2,3,4,5]' | jq 'map(. * 2)'
+[
+  2,
+  4,
+  6,
+  8,
+  10
+]
+```
+
+map_values。
+
+```json
+❯ echo '{"a":1, "b":2, "c":3, "d":4, "e":5}' | jq 'map_values(. * 2)'
+{
+  "a": 2,
+  "b": 4,
+  "c": 6,
+  "d": 8,
+  "e": 10
+}
+```
+
+
 
 ## References
 - [シェル芸で使いたい jqイディオム \- Qiita](https://qiita.com/nmrmsys/items/5b4a4bd2e3909db161b1)
